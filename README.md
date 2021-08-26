@@ -1,7 +1,7 @@
 Parking_management
 ==================
 
-web server parkingmanagement
+Parkingmanagement with node server NODE-RED
 
 ### About
 
