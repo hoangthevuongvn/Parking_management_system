@@ -1,0 +1,827 @@
+[
+    {
+        "id": "f3e7e914a93a04db",
+        "type": "tab",
+        "label": "Chart",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bd0916f5ba846823",
+        "type": "tab",
+        "label": "Parking",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "9a81af532f3f8327",
+        "type": "postgreSQLConfig",
+        "name": "db_pub",
+        "host": "airthing.ddns.net",
+        "hostFieldType": "str",
+        "port": "5555",
+        "portFieldType": "num",
+        "database": "postgres",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "max": "10",
+        "maxFieldType": "num",
+        "min": "1",
+        "minFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "Abc@1234",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "20ae1e52d1eef983",
+        "type": "postgreSQLConfig",
+        "name": "myuser@timescale:5432/iot",
+        "host": "timescale",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "iot",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "max": "10",
+        "maxFieldType": "num",
+        "min": "1",
+        "minFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "myuser",
+        "userFieldType": "str",
+        "password": "???",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "34909ab87d7cc6e1",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b6f3cf64099bae7f",
+        "type": "ui_group",
+        "name": "Chart",
+        "tab": "d03c81896bc614a5",
+        "order": 1,
+        "disp": true,
+        "width": 16,
+        "collapse": false
+    },
+    {
+        "id": "89749fb7.87f01",
+        "type": "ui_group",
+        "name": "Charts",
+        "tab": "",
+        "order": 2,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "ab397e95.29ebe",
+        "type": "ui_group",
+        "name": "Inputs",
+        "tab": "",
+        "order": 1,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "4e7edda4.417004",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "",
+        "order": 3,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "7e0986266aab3851",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "14.232.213.49",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "314f611776b7f614",
+        "type": "ui_group",
+        "name": "Parking",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "485a8ddbd83fbcfe",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "42.168.1.105",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6e9a48847fb0f9c6",
+        "type": "ui_tab",
+        "name": "Parking",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d03c81896bc614a5",
+        "type": "ui_tab",
+        "name": "Charts",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fdb4484f8c5f0c3d",
+        "type": "ui_group",
+        "name": "park",
+        "tab": "6e9a48847fb0f9c6",
+        "order": 5,
+        "disp": true,
+        "width": "24",
+        "collapse": false
+    },
+    {
+        "id": "b930fe7e.897db",
+        "type": "ui_group",
+        "name": "picture",
+        "tab": "",
+        "order": 9,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "72303c1.198bdc4",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 26,
+        "collapse": false
+    },
+    {
+        "id": "c49333e8c23275b0",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "5a9932196c6fe916",
+        "type": "ui_group",
+        "name": "parking",
+        "tab": "",
+        "order": 5,
+        "disp": true,
+        "width": "20",
+        "collapse": false
+    },
+    {
+        "id": "839180c0.aa62a",
+        "type": "ui_group",
+        "name": "Analogue",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "16",
+        "collapse": false
+    },
+    {
+        "id": "17c9d06c.89dcb",
+        "type": "ui_group",
+        "name": "Bãi đỗ xe thông minh",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ce9254af.b930b8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "42.168.1.105",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "160ddf0a.756f41",
+        "type": "ui_group",
+        "name": "Secure",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "4f3d9279.22b82c",
+        "type": "ui_group",
+        "name": "pin",
+        "tab": "",
+        "order": 2,
+        "disp": false,
+        "width": "1"
+    },
+    {
+        "id": "5495a76c4b0b62ac",
+        "type": "postgresdb",
+        "cfgname": "postgres",
+        "hostname": "192.168.0.68",
+        "port": "8899",
+        "db": "new",
+        "ssl": false
+    },
+    {
+        "id": "2822e1fde3064bef",
+        "type": "postgresdb",
+        "cfgname": "postgres",
+        "hostname": "192.168.0.68",
+        "port": "8899",
+        "db": "new",
+        "ssl": false
+    },
+    {
+        "id": "4dfa005ee337be3e",
+        "type": "postgresdb",
+        "cfgname": "postgres",
+        "hostname": "192.168.0.68",
+        "port": "8899",
+        "db": "new",
+        "ssl": false
+    },
+    {
+        "id": "f3c30a3f67bac847",
+        "type": "ui_chart",
+        "z": "f3e7e914a93a04db",
+        "name": "",
+        "group": "b6f3cf64099bae7f",
+        "order": 3,
+        "width": 16,
+        "height": 11,
+        "label": "Doanh số",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff0000",
+            "#0000ff",
+            "#00ff00",
+            "#2ca02c",
+            "#98df8a",
+            "#d72828",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 780,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "22c3fddedaad59de",
+        "type": "postgresql",
+        "z": "f3e7e914a93a04db",
+        "name": "",
+        "query": "SELECT * FROM array_chart\nORDER BY month_number;\n\n",
+        "postgreSQLConfig": "9a81af532f3f8327",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "46a1ef0e753f531f"
+            ]
+        ]
+    },
+    {
+        "id": "40e3231febd249c3",
+        "type": "inject",
+        "z": "f3e7e914a93a04db",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "22c3fddedaad59de"
+            ]
+        ]
+    },
+    {
+        "id": "687de15a9de3c9ee",
+        "type": "debug",
+        "z": "f3e7e914a93a04db",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "46a1ef0e753f531f",
+        "type": "change",
+        "z": "f3e7e914a93a04db",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[{\"series\":[$distinct(payload.region)],\t\"data\": [[$each(payload{region:data},function($value){$value})]],\t \"labels\":[$distinct(payload.month)]\t }]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "687de15a9de3c9ee",
+                "f3c30a3f67bac847",
+                "50abd5476d2227ac",
+                "7d043f20b9bbea4d"
+            ]
+        ]
+    },
+    {
+        "id": "50abd5476d2227ac",
+        "type": "ui_chart",
+        "z": "f3e7e914a93a04db",
+        "name": "",
+        "group": "b6f3cf64099bae7f",
+        "order": 1,
+        "width": 16,
+        "height": 11,
+        "label": "Thống kê",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "20",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 780,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d043f20b9bbea4d",
+        "type": "ui_chart",
+        "z": "f3e7e914a93a04db",
+        "name": "",
+        "group": "b6f3cf64099bae7f",
+        "order": 2,
+        "width": 16,
+        "height": 11,
+        "label": "Tỉ lệ",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "30",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff0000",
+            "#0000ff",
+            "#00ff00",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 770,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b57c985534caefa",
+        "type": "ui_template",
+        "z": "bd0916f5ba846823",
+        "group": "fdb4484f8c5f0c3d",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html>\n\n<head>\n    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\">\n    <title>RMC parking</title>\n    <style>\n        td {\n            background-color:;\n            height: 95px;\n            width: 200px;\n        }\n        \n        body {\n            width: 100%;\n            height: 100%;\n            background-color: #fff;\n        }\n        \n        .car {\n            width: 145px;\n            height: 65px;\n            background-image: url(\"https://i.ibb.co/h938z98/car.png\");\n             background-repeat: no-repeat; \n           }\n        \n        .car1 {\n            width: 145px;\n            height: 65px;\n            background-image: url(\"https://i.ibb.co/98mKsZY/car1.png\");\n             background-repeat: no-repeat; \n            \n        }\n        \n        .car2 {\n            margin-top: 10px;\n            margin-bottom: 10px;\n            margin-left: 45px;\n            width: 85px;\n            height: 135px;\n            background-image: url(\"https://i.ibb.co/vj99p9G/unparked.png\");\n            background-repeat: no-repeat; \n        }\n      #p{\n        font-size: 40px;\n        font-weight: bold;\n       }\n       h1{\n    width:100px;\n    margin-top:-20px;\n    margin-left:255px;\n    background:white;\n    font-size: 30px\n}\n    </style>\n\n</head>\n\n<body>\n\n    <img src=\"http://ilovenb.wap.sh/hinhnen/la-co-viet-nam/Anh-bia-Toi-yeu-Viet-Nam-co-do-sao-vang-10.jpg\"  style=\" display: block;height: 120px;width: 80%; margin-left: auto; margin-right: auto;\">\n\n    <br>\n    <center>\n      \n        <p style=\"padding-top: ;padding-left: 27%\"> <font style=\"font-size: 25px\"><b>Bãi đỗ xe</b> <font style=\"color: #3ED715;font-size: 18px;padding-left: 240px\"> * Còn trống </font> &nbsp; <font style=\"color: red;font-size: 18px\"> * Đã có xe! </font></p>\n    </center>\n    <div class=\"row\">\n      \n      <div class=\"container\" style=\"border:2px solid black; width:85% \">\n\n<h1>LỐI VÀO</h1>\n<h1 style=\"margin-top:-40px;  margin-left:895px; width:70px\">LỐI RA</h1>\n\n         <div class=\"col-md-4\" style=\"margin-left: \">\n                <table style=\"\">\n                    <tr>\n                        <td style=\"border-top:5px solid  #FFFF01;border-left:5px solid  #FFFF01 \">\n                            <div class=\"car\" id=\"c1\" style=\" margin-left: 20px\" >\n                            </div>\n                        </td>\n                    </tr>\n\n                    <tr>\n                        <td style=\"border-top:5px solid  #FFFF01;border-left:5px solid  #FFFF01\">\n                            <div class=\"car\" id=\"c2\" style=\" margin-left: 20px\"></div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td style=\"border-top:5px solid  #FFFF01;border-left:5px solid  #FFFF01;border-bottom:5px solid  #FFFF01\">\n                            <div class=\"car\" style=\" margin-left: 20px\" id=\"c3\"></div>\n                        </td>\n\n                    </tr>\n                </table>\n            </div>\n            <div class=\"col-md-4\" style=\"margin-right: \">\n                <table>\n                    <tr>\n                        <td style=\"border-right:3px solid #FFFF01;border-bottom:5px solid  #FFFF01;border-top:5px solid  #FFFF01\">\n                            <div class=\"car1\" style=\" margin-left: 20px\" id=\"c4\"></div>\n                        </td>\n\n                        <td style=\"border-bottom:5px solid  #FFFF01;border-top:5px solid  #FFFF01\">\n                            <div class=\"car\" style=\" margin-left: 20px;\" id=\"c5\"> </div>\n                        </td>\n                    </tr>\n                    <tr>\n\n                        <td style=\"border-right:3px solid  #FFFF01;border-bottom:5px solid  #FFFF01\">\n                            <div class=\"car1\" style=\" margin-left: 20px\" id=\"c6\"></div>\n                        </td>\n                        <td style=\"border-bottom:5px solid  #FFFF01\">\n                            <div class=\"car\" style=\" margin-left: 20px;\" id=\"c17\"></div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td style=\"border-right:3px solid  #FFFF01;border-bottom:5px solid  #FFFF01 \">\n                            <div class=\"car1\" style=\" margin-left: 20px\" id=\"c7\"></div>\n                        </td>\n                        <td style=\"border-bottom:5px solid  #FFFF01\">\n                            <div class=\"car\" style=\" margin-left: 20px\" id=\"c18\"></div>\n                        </td>\n                    </tr>\n\n                </table>\n            </div>\n                <div class=\"col-md-4\" style=\"padding-left: 160px\">\n                    <table>\n                        <tr>\n                            <td style=\"border-bottom:5px solid  #FFFF01;border-top:5px solid  #FFFF01;border-right:5px solid  #FFFF01\">\n                                <div class =\"car1\" style=\" margin-left: 20px\" id=\"c8\"></div>\n                            </td>\n                        </tr>\n\n                        <tr>\n                            <td style=\"border-bottom:5px solid  #FFFF01;border-right:5px solid  #FFFF01\">\n                                <div class=\"car1\" style=\" margin-left: 20px\" id=\"c9\"></div>\n                            </td>\n                        </tr>\n                        <tr>\n                            <td style=\"border-right:5px solid  #FFFF01;border-bottom:5px solid  #FFFF01\">\n                                <div class=\"car1\" style=\" margin-left: 20px\" id=\"c10\"></div>\n                            </td>\n\n                        </tr>\n                    </table>\n                </div>\n                \n\n                <div class=\"col-md-12\" style=\"padding-top: 20px  \">\n                    <table>\n                        <tr>\n                            <td style=\"border-left:5px solid  #FFFF01;border-right:5px solid  #FFFF01;border-bottom:5px solid  #FFFF01;\">\n                                <div class=\"car2\" id=\"c11\"></div>\n                            </td>\n                            <td style=\"border-right:5px solid  #FFFF01;border-bottom:5px solid  #FFFF01\">\n                                <div class=\"car2\" id=\"c12\"></div>\n                            </td>\n                            <td style=\"border-right:5px solid  #FFFF01;border-bottom:5px solid  #FFFF01\">\n                                <div class=\"car2\" id=\"c13\"></div>\n                            </td>\n                            <td style=\"border-right:5px solid  #FFFF01;border-bottom:5px solid  #FFFF01\">\n                                <div class=\"car2\" id=\"c14\"></div>\n                            </td>\n                            <td style=\"border-right:5px solid  #FFFF01;border-bottom:5px solid  #FFFF01\">\n                                <div class=\"car2\" id=\"c15\"></div>\n                            </td>\n                            <td style=\"border-bottom:5px solid  #FFFF01; border-right:5px solid  #FFFF01\">\n                                <div class=\"car2\" id=\"c16\"></div>\n                            </td>\n\n                        </tr>\n\n                    </table>\n                </div>\n     \n                <script>\n                (function(scope) {\n        console.log('Position 1');\n        console.dir(scope);\n        scope.$watch('msg.payload', function(data) {\n\n\n//chuong so 1\nif(data[0].id == 1 && data[0].status == \"parked\")\n {\n $(\"#c1\").css('background-image', 'url(https://i.ibb.co/ryPqw0V/carparked.png)');\n }\n if(data[0].id == 1 && data[0].status == \"available\")\n {\n $(\"#c1\").css('background-image','url(https://i.ibb.co/h938z98/car.png)');\n };\n //chuong so 2\n console.log(data);\nconsole.log(data[1].id);\nif(data[1].id == 2 && data[1].status == \"parked\")\n {\nconsole.log('Nhay lenh');\n $(\"#c2\").css('background-image', 'url(https://i.ibb.co/ryPqw0V/carparked.png)');\n }\n if(data[1].id == 2 && data[1].status == \"available\")\n {\n     console.log('0 lenh');\n $(\"#c2\").css('background-image','url(https://i.ibb.co/h938z98/car.png)');\n };\n //chuong so 3\nif(data[2].id == 3 && data[2].status == \"parked\")\n {\n $(\"#c3\").css('background-image', 'url(https://i.ibb.co/ryPqw0V/carparked.png)');\n }\n if(data[2].id == 3 && data[2].status == \"available\")\n {\n $(\"#c3\").css('background-image','url(https://i.ibb.co/h938z98/car.png)');\n };\n //chuong so 5\nif(data[4].id == 5 && data[4].status == \"parked\")\n {\n $(\"#c5\").css('background-image', 'url(https://i.ibb.co/ryPqw0V/carparked.png)');\n }\n if(data[4].id == 5 && data[4].status == \"available\")\n {\n $(\"#c5\").css('background-image','url(https://i.ibb.co/h938z98/car.png)');\n };\n //chuong so 17\nif(data[16].id == 17 && data[16].status == \"parked\")\n {\n $(\"#c17\").css('background-image', 'url(https://i.ibb.co/ryPqw0V/carparked.png)');\n }\n if(data[16].id == 17 && data[16].status == \"available\")\n {\n $(\"#c17\").css('background-image','url(https://i.ibb.co/h938z98/car.png)');\n };\n //chuong so 18\n if(data[17].id == 18 && data[17].status == \"parked\")\n {\n $(\"#c18\").css('background-image', 'url(https://i.ibb.co/ryPqw0V/carparked.png)');\n }\n if(data[18].id == 18 && data[17].status == \"available\")\n {\n $(\"#c18\").css('background-image','url(https://i.ibb.co/h938z98/car.png)');\n };\n \n \n\n        });\n    })(scope);\n    \n \n\n     \n </script>\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 620,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "40e93a08f18a5e95",
+        "type": "postgresql",
+        "z": "bd0916f5ba846823",
+        "name": "",
+        "query": "SELECT * FROM park\nORDER BY id;\n\n\n",
+        "postgreSQLConfig": "9a81af532f3f8327",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 370,
+        "y": 580,
+        "wires": [
+            [
+                "20e02a7ac2e67390",
+                "8b57c985534caefa"
+            ]
+        ]
+    },
+    {
+        "id": "0acdf5a7dd01767e",
+        "type": "inject",
+        "z": "bd0916f5ba846823",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 580,
+        "wires": [
+            [
+                "40e93a08f18a5e95"
+            ]
+        ]
+    },
+    {
+        "id": "20e02a7ac2e67390",
+        "type": "debug",
+        "z": "bd0916f5ba846823",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "0fd163c30988a4ea",
+        "type": "postgresql",
+        "z": "bd0916f5ba846823",
+        "name": "",
+        "query": "UPDATE park\nSET status = '{{msg.payload.status}}'\nWHERE id = {{msg.payload.id}};\n\n",
+        "postgreSQLConfig": "9a81af532f3f8327",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 350,
+        "y": 800,
+        "wires": [
+            [
+                "cbe386c0113ce53d"
+            ]
+        ]
+    },
+    {
+        "id": "bf8874832d7e80ce",
+        "type": "inject",
+        "z": "bd0916f5ba846823",
+        "name": "id:2 parked",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\":3, \"status\":\"parked\"}",
+        "payloadType": "json",
+        "x": 180,
+        "y": 800,
+        "wires": [
+            [
+                "0fd163c30988a4ea"
+            ]
+        ]
+    },
+    {
+        "id": "cbe386c0113ce53d",
+        "type": "debug",
+        "z": "bd0916f5ba846823",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "b0535cbb84f47bad",
+        "type": "mqtt in",
+        "z": "bd0916f5ba846823",
+        "name": "",
+        "topic": "park",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "7e0986266aab3851",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 880,
+        "wires": [
+            [
+                "0fd163c30988a4ea"
+            ]
+        ]
+    },
+    {
+        "id": "1d18478174c53aac",
+        "type": "inject",
+        "z": "bd0916f5ba846823",
+        "name": "id:2 available",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\":3, \"status\":\"available\"}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 720,
+        "wires": [
+            [
+                "0fd163c30988a4ea"
+            ]
+        ]
+    }
+]

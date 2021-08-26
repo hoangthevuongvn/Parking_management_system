@@ -1,0 +1,16 @@
+{
+    "name": "Parking_management",
+    "description": "web server parkingmanagement",
+    "version": "0.0.1",
+    "dependencies": {
+        "node-red-contrib-postgresql": "0.2.1",
+        "node-red-dashboard": "2.30.0",
+        "node-red-contrib-re-postgres": "0.3.2"
+    },
+    "node-red": {
+        "settings": {
+            "flowFile": "flow.json",
+            "credentialsFile": "flow_cred.json"
+        }
+    }
+}
